@@ -1,0 +1,8 @@
+  # ignored files:
+    *.ipynb
+
+  # Untracked files:
+    analyse-pluto.jl
+
+  # Untracked directories
+    .ipynb_checkpoints
