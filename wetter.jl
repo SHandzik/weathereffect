@@ -29,8 +29,8 @@ filter(:Niederschlag => >(40), data)
 
 head(sort(data, :Temp_Max, rev = true), 10)
 
-maximum(data.Temperatur_Max)
-minimum(data.Temperatur_Min)
+maximum(data.Temp_Max)
+minimum(data.Temp_Min)
 
 filter(:Temperatur_Min => <(-15), data)
 
@@ -41,13 +41,14 @@ filter(:Temperatur_Min => <(-15), data)
    dataJahr = @where(data, :Temp_Max .>= 25)
    sommertag = combine(groupby(dataJahr, :Jahr), :Temp_Max => length)
   
-   @pipe sommertag |>
+@pipe sommertag |>
         plot(_.Jahr, _.Temp_Max_length, 
         line = :bar,
-        title = "Sommertage > 25°C",
+        title = "Sommertage ≥ 25°C",
         legend = :none,
         size = (1200, 600))
   
+ #savefig(pltSoT, "KA-SommerTag.png")
 
   dataJahrT = @where(data, :Temp_Max .>= 30)
   tropentag = combine(groupby(dataJahrT, :Jahr), :Temp_Max => length)
@@ -70,13 +71,27 @@ plt1 = @pipe data |>
 
 #savefig(plt1, "KA-Temp_Max.png")
 
+# Berrechnung der Jahresniederschlagsmengen
 
+dataJahrNie = @where(data, :Niederschlagsmenge .> 0)
+NieschlJahr = combine(groupby(dataJahrNie, :Jahr), :Niederschlagsmenge => sum)
+
+pltJaNie = @pipe NieschlJahr |>
+        plot(_.Jahr, _.Niederschlagsmenge_sum, 
+        line = :bar,
+        title = "Jahresniederschlagsmenge Kahler Asten in mm/m²",
+        legend = :none,
+        size = (1200, 600)) 
+
+##
 @pipe data |>
         plot(_.Datum, _.Niederschlagsmenge, 
         line = :scatter,
-        title = "Niederschlagsmenge Kahler Asten",
+        title = "Niederschlagsmenge Kahler Asten in mm/m²",
         legend = :none,
-        size = (1200, 600))     
+        size = (1200, 600))    
+
+#savefig(pltNi, "KA-Niederschlag.png")
 
 @pipe data |>
        	plot(_.Datum, _.Windspitze, 
