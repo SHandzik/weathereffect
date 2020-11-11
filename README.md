@@ -1,11 +1,11 @@
-### Hier geht es ums Wetter
+### Hi, hier geht es ums Wetter
 
 #Hallo!
 
-Der [Deutsche Wetterdienst](https://dwd.de) stellt in einem Open Data Projekt die Wetterdaten seiner Wetterstationen zur Verfügung.  :+1 
+Der [Deutsche Wetterdienst](https://dwd.de) stellt in einem Open Data Projekt die Wetterdaten seiner Wetterstationen zur Verfügung. :+1 
 
-In einem ersten zuge wurden die Wetterdaten des [Kahler Asten](https://www.openstreetmap.org/#map=18/51.18016/8.48942) von mit ausgewertet. Der Datensatz beginnt am **01.01.1969** und reicht bis zum **31.12.2019**.
-Die Rohdaten reichen zurück bis ins Jahr 1929 sind aber sehr lückenhaft. Aus diesem Grund habe ich sie in dieser Darstellung zunächst nicht berücksichtigt. 
+In einem ersten zuge wurden die Wetterdaten des [Kahler Asten](https://www.openstreetmap.org/#map=18/51.18016/8.48942) von mit ausgewertet. Der Datensatz beginnt am **01.01.1955** und reicht bis zum **31.12.2019**.
+Die Rohdaten reichen zurück bis ins Jahr 1929 sind aber sehr lückenhaft.  Aus diesem Grund habe ich sie in dieser Darstellung zunächst nicht berücksichtigt. So fehlen z.B. zwischen 1944 und 1954 die Daten komplett.
 
 ####Die Temperaturdaten
 Dem Chart liegen die jeweiligen Tageshöchstwerte zugrunde. 
