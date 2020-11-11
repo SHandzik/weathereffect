@@ -33,4 +33,5 @@ Ein Sommertag is ein Tag mit Tageshöchstwerten ≥ 25°C.
 1992-08-09  │ 30.2       
 2003-08-08  │ 30.1       
 
+hhh
 
