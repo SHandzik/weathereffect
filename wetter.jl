@@ -4,8 +4,8 @@ using CSV, Plots, DataFrames, DataFramesMeta, Pipe, Dates
 dfmt = dateformat"yyyymmdd"
 column_types = Dict(:MESS_DATUM => Date)
 
-data = convert(DataFrame, CSV.read("./data/02483-data.txt", delim=';',types=column_types, dateformat=dfmt))
-
+#data = convert(DataFrame, CSV.File("./data/02483-data.txt", delim=';',types=column_types, dateformat=dfmt))
+data = CSV.File("./data/02483-data.txt", delim=';',types=column_types, dateformat=dfmt) |> DataFrame
 # Select the nessersary columns
 
 select!(data, :2, :4, :5, :7, :10, :14, :16 :17)
