@@ -2,7 +2,8 @@
 
 English text below
 
-Dieses Notbook befindet sich derzeit im Aufbau. Noch etwas geduld.  
+In diesem Notbook wird auf die Veränderung der Wettermuster in Südwestfalen betrachtet. 
+Basis sind Wetterdaten des [DWD](http://dwd.de) die auf dem [Open Data Portal](https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/kl/historical/)
 
 
 
